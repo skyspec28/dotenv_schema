@@ -3,14 +3,14 @@ name = "env-loader"
 version = "0.1.0"
 description = "A simple Python package to load and validate environment variables from a .env file."
 authors = [
-  { name="Athingban Pelumi", email="your@email.com" }
+  { name="Athingban Pelumi", email="maulomepelumi@gmail.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
 
 [project.urls]
-"Homepage" = "https://github.com/yourusername/env-loader"
+"Homepage" = "https://github.com/skyspec28/env_loader.git"
 
 [build-system]
 requires = ["setuptools>=61.0"]
