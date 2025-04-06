@@ -3,15 +3,14 @@ name = "dotenv-schema"
 version = "0.1.0"
 description = "A simple Python package to load, validate, and type-cast environment variables from .env files using a schema."
 authors = [
-  { name="Athingban Pelumi", email="maulomepelumi@gmail.com" }
+  { name="maulome Pelumi", email="maulomepelumi@gmail.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text = "MIT" }
+license = "MIT"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
