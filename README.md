@@ -136,3 +136,79 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 5. Open a Pull Request
 
 Please make sure to update tests as appropriate.
+
+## Publishing to PyPI
+
+This project uses GitHub Actions to automatically build and publish to PyPI when a new release is created.
+
+### Manual Publishing
+
+If you want to publish manually:
+
+1. Install the required tools:
+   ```bash
+   pip install build twine
+   ```
+
+2. Build the package:
+   ```bash
+   python -m build
+   ```
+
+3. Check the distribution:
+   ```bash
+   twine check dist/*
+   ```
+
+4. Upload to Test PyPI (optional):
+   ```bash
+   twine upload --repository testpypi dist/*
+   ```
+
+5. Upload to PyPI:
+   ```bash
+   twine upload dist/*
+   ```
+
+### Using GitHub Actions with Trusted Publisher
+
+This project uses PyPI's Trusted Publisher feature for secure publishing without API tokens:
+
+1. Update the version in `pyproject.toml` (you can use the provided script):
+   ```bash
+   # Bump patch version (0.1.0 -> 0.1.1)
+   python bump_version.py patch
+   ```
+
+2. Commit and push the version change:
+   ```bash
+   git add pyproject.toml
+   git commit -m "chore: bump version to X.Y.Z"
+   git push origin main
+   ```
+
+3. Create a new release on GitHub:
+   - Go to the Releases page on your GitHub repository
+   - Click "Draft a new release"
+   - Set the tag version (e.g., `v0.1.1`)
+   - Set the release title (e.g., `Version 0.1.1`)
+   - Add release notes describing the changes
+   - Click "Publish release"
+
+4. The workflow will automatically build and publish to PyPI using the Trusted Publisher mechanism
+
+### Setting Up Trusted Publisher
+
+To set up PyPI's Trusted Publisher:
+
+1. Go to your package page on PyPI
+2. Navigate to "Settings" > "Publishing"
+3. Click "Add" under "Trusted publishers"
+4. Fill in the details:
+   - **Publisher**: GitHub Actions
+   - **Workflow name**: Publish to PyPI
+   - **Repository owner**: Your GitHub username or organization
+   - **Repository name**: dotenv-schema
+   - **Environment**: pypi (must match the environment in the workflow file)
+
+For more information, see [PyPI's Trusted Publisher documentation](https://docs.pypi.org/trusted-publishers/).
