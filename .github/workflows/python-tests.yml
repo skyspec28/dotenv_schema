@@ -30,13 +30,7 @@ jobs:
       run: |
         pytest
 
-    - name: Generate coverage report
+    # Run tests with coverage for local use only
+    - name: Run tests with coverage
       run: |
-        pytest --cov=dotenv_schema --cov-report=xml
-
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v4
-      with:
-        file: ./coverage.xml
-        fail_ci_if_error: false
-        token: ${{ secrets.CODECOV_TOKEN }}
+        pytest --cov=dotenv_schema

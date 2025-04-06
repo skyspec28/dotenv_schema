@@ -3,7 +3,6 @@
 [![PyPI version](https://img.shields.io/pypi/v/dotenv-schema.svg)](https://pypi.org/project/dotenv-schema/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/dotenv-schema.svg)](https://pypi.org/project/dotenv-schema/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![codecov](https://codecov.io/gh/skyspec28/dotenv_schema/graph/badge.svg)](https://codecov.io/gh/skyspec28/dotenv_schema)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/skyspec28/dotenv_schema/python-tests.yml?branch=main)](https://github.com/skyspec28/dotenv_schema/actions)
 
 A simple, lightweight Python tool to load, validate, and type-cast environment variables from `.env` files using a schema. This package helps you manage configuration in a type-safe way while keeping your secrets out of your codebase.
