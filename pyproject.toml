@@ -1,5 +1,5 @@
 [project]
-name = "env-loader"
+name = "env_loader"
 version = "0.1.0"
 description = "A simple Python package to load and validate environment variables from a .env file."
 authors = [
@@ -15,3 +15,9 @@ license = { text = "MIT" }
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
