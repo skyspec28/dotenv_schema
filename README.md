@@ -1,4 +1,10 @@
-# env_loader
+# dotenv-schema
+
+[![PyPI version](https://img.shields.io/pypi/v/dotenv-schema.svg)](https://pypi.org/project/dotenv-schema/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/dotenv-schema.svg)](https://pypi.org/project/dotenv-schema/)
+[![License](https://img.shields.io/github/license/skyspec28/dotenv-schema.svg)](https://github.com/skyspec28/dotenv-schema/blob/main/LICENSE)
+[![Test Coverage](https://img.shields.io/codecov/c/github/skyspec28/dotenv-schema.svg)](https://codecov.io/gh/skyspec28/dotenv-schema)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/skyspec28/dotenv-schema/python-tests.yml?branch=main)](https://github.com/skyspec28/dotenv-schema/actions)
 
 A simple, lightweight Python tool to load, validate, and type-cast environment variables from `.env` files using a schema. This package helps you manage configuration in a type-safe way while keeping your secrets out of your codebase.
 
@@ -13,14 +19,14 @@ A simple, lightweight Python tool to load, validate, and type-cast environment v
 ## Installation
 
 ```bash
-pip install env_loader
+pip install dotenv-schema
 ```
 
 For development:
 
 ```bash
-git clone https://github.com/skyspec28/env_loader.git
-cd env_loader
+git clone https://github.com/skyspec28/dotenv-schema.git
+cd dotenv-schema
 pip install .
 ```
 
@@ -29,7 +35,7 @@ pip install .
 ### Basic Usage
 
 ```python
-from env_loader import load_env_file
+from dotenv_schema import load_env_file
 
 # Load variables from .env file
 env_vars = load_env_file()
@@ -43,7 +49,7 @@ print(os.environ['DATABASE_URL'])  # 'postgres://...'
 ### With Schema Validation
 
 ```python
-from env_loader import load_env_file, apply_schema
+from dotenv_schema import load_env_file, apply_schema
 
 # Define your schema
 schema = {
@@ -116,7 +122,7 @@ pip install ".[dev]"
 pytest
 
 # Run tests with coverage report
-pytest --cov=env_loader
+pytest --cov=dotenv_schema
 ```
 
 ## Contributing
