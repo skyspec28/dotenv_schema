@@ -1,4 +1,4 @@
-# env-loader
+# env_loader
 
 A simple, lightweight Python tool to load, validate, and type-cast environment variables from `.env` files using a schema. This package helps you manage configuration in a type-safe way while keeping your secrets out of your codebase.
 
@@ -13,15 +13,15 @@ A simple, lightweight Python tool to load, validate, and type-cast environment v
 ## Installation
 
 ```bash
-pip install env-loader
+pip install env_loader
 ```
 
 For development:
 
 ```bash
 git clone https://github.com/skyspec28/env_loader.git
-cd env-loader
-pip install -e .
+cd env_loader
+pip install .
 ```
 
 ## Usage
@@ -104,6 +104,21 @@ Validates and transforms environment variables according to the provided schema.
 
 MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Testing
+
+The project uses pytest for testing. To run the tests:
+
+```bash
+# Install the package with development dependencies
+pip install ".[dev]"
+
+# Run tests
+pytest
+
+# Run tests with coverage report
+pytest --cov=env_loader
+```
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -113,3 +128,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+Please make sure to update tests as appropriate.
